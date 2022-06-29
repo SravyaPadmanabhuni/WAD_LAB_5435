@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>confirm, prompt, alert boxes</title>
+	<script type="text/javascript">
+		var d = new Date()
+		var time = d.getHours()
+		var day = d.getDay()
+		var c = ['S', 2, 'V', true,'E','S']
+		document.writeln("Array elemnts are:")
+		for(i in c){
+			document.writeln(c[i] + " ")
+		}
+		document.writeln("<br>"+"Array length is "+ c.length+ "<br>")
+		if(time == 12){
+			document.writeln("It's Time to eat")
+		}
+		else if(time == 8){
+			document.writeln("It's time to go to college" + "<br>")
+		}
+		else{
+			document.writeln("It's Time to sleep"+ "<br>")
+		}
+		function show_confirm(){
+			var r = confirm("Press confirm to continue")
+			if(r == true){
+				document.write("You Confirmed it")
+			}
+			else{
+				document.write("You Cancelled it")
+			}
+		}
+		function show_prompt(){
+			var name = prompt("Enter your name")
+			if (name != null && name != ""){
+				document.write("Hello " + name+"!")
+			}
+		}
+		function show_alert()
+		{
+			alert("Alert is Successfully created")
+		}
+		try{
+			var a= 2/0
+			throw "Have a good day :)"
+			document.write(a)
+		}
+		catch(er){
+			alert(er);
+		}
+		finally{
+			document.write("Finally executed")
+		}
+	</script>
+</head>
+<body>
+	<h1>Internal JS Demo</h1>
+	<h1>alert demo</h1>
+	<input type="button" onclick="show_alert()" style="width: 100px;" value ='click me!'></input>
+	<h1>Confirm demo</h1>
+	<input type="button" onclick="show_confirm()" value = 'Confirmation'></input>
+	<h1>Prompt</h1>
+	<input type="button" onclick="show_prompt()" value = 'prompt is open'></input>
+	
+</body>
+</html>
