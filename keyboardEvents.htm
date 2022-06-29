@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+ 		<title>Keyboard Events</title>
+    </head>
+	<body>
+		<h3><u>On keydown</u></h3>
+		<p>A function is triggered when the user is pressing a key in the input field.</p>
+		<input type="text" onkeydown="myFunction1()">
+		<script>
+			function myFunction1() {
+  			alert("You pressed a key inside the input field");
+			}
+		</script>
+		<h3><u>On keyup</u></h3>
+		<p>A function is triggered when the user releases a key in the input field. The function outputs the actual key/letter that was released inside the text field.</p>
+		Enter your name: <input type="text" id="fname" onkeyup="myFunction2()">
+		<p>My name is: <span id="demo"></span></p>
+		<script>
+			function myFunction2() {
+  			var x = document.getElementById("fname").value;
+  			document.getElementById("demo").innerHTML = x;
+			}
+		</script>
+	</body>
+</html>
