@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <script>
+            function add(){
+                var n1=document.getElementById("n1");
+                var n2=document.getElementById("n2");
+                var result=Number(n1.value)+Number(n2.value);
+                document.getElementById("r1").value=result;
+            }
+            function sub(){
+                var n1=document.getElementById("n1");
+                var n2=document.getElementById("n2");
+                var result=Number(n1.value)-Number(n2.value);
+                document.getElementById("r1").value=result;
+            }
+            function mul(){
+                var n1=document.getElementById("n1");
+                var n2=document.getElementById("n2");
+                var result=Number(n1.value)*Number(n2.value);
+                document.getElementById("r1").value=result;
+            }
+            function divi(){
+                var n1=document.getElementById("n1");
+                var n2=document.getElementById("n2");
+                var result=Number(n1.value)/Number(n2.value);
+                document.getElementById("r1").value=result;
+            }
+            function Mod(){
+                var n1=document.getElementById("n1");
+                var n2=document.getElementById("n2");
+                var result=Number(n1.value)%Number(n2.value);
+                document.getElementById("r1").value=result;
+            }
+        </script>
+    </head>
+    <body>
+        <form>
+            <h2>Enter the first numb:</h2>
+            <input type="text" id="n1"><br><br>
+            <h2>Enter the second numb:</h2>
+            <input type="text" id="n2"><br><br>
+            <input type="button"  value="add" onclick="add()"/>
+            
+            <input type="button"  value="sub" onclick="sub()"/>
+            
+            <input type="button"  value="mul" onclick="mul()"/>
+            
+            <input type="button"  value="div" onclick="divi()"/>
+            
+            <input type="button"  value="mod" onclick="Mod()"/><br><br>
+            <input type="text" id="r1" ><br><br>
+            <input type="reset" id="clr" value="clear"/>
+        </form>
+    </body>
+</html>
