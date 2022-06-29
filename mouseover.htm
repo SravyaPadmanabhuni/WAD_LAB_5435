@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<center>
+<h3><u>Mouseover event</u></h3>
+<img onmouseover="bigImg(this)" onmouseout="normalImg(this)" border="0" src="WISE.jpg" alt="WISE" width="32" height="32">
+<p>When the user moves the mouse pointer over the image the size of image will be increased.</p>
+<p>When mouse pointer is moved out of the image, it's size will be re-sized.</p>
+</center>
+<script>
+function bigImg(x) {
+  x.style.height = "128px";
+  x.style.width = "128px";
+}
+function normalImg(x) {
+  x.style.height = "64px";
+  x.style.width = "64px";
+}
+</script>
+</body>
+</html>
